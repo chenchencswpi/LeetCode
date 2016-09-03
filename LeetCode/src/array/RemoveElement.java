@@ -1,0 +1,61 @@
+package array;
+
+import java.util.ArrayList;
+
+public class RemoveElement {
+
+}
+
+class RemoveElementSolution {
+	/**
+	 * Use extra buffer.
+	 * @param nums
+	 * @param val
+	 * @return
+	 */
+	public int removeElement(int[] nums, int val) {
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		for (int number: nums) {
+			if (number != val) {
+				list.add(number);
+			}
+		}
+		
+		for (int i = 0; i < list.size(); i++) {
+			nums[i] = list.get(i);
+		}
+		
+		return nums.length;
+	}
+	
+	/**
+	 * Use O(1) space.
+	 * @param nums
+	 * @param val
+	 * @return
+	 */
+	public int removeElement2(int[] nums, int val) {
+		int left = 0, right = nums.length - 1;
+		int newLength = 0;
+		while (left <= right) {
+			while (left < nums.length && nums[left] != val) {
+				left++;
+				newLength++;
+			}
+			while (right >= 0 && nums[right] == val) {
+				right--;
+			}
+			if (left > right) {
+				return newLength;
+			}
+			int temp = nums[left];
+			nums[left] = nums[right];
+			nums[right] = temp;
+			left++;
+			right--;
+			newLength++;
+		}
+		return newLength;
+	}
+}
