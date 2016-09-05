@@ -4,7 +4,7 @@ public class MergeSortedArray {
 	
 	public static void main(String[] args) {
 		int[] array1 = {3}, array2 = {1};
-		new MergeSortedArraySolution().merge(array1, 0, array2, 1);
+		array1 = new MergeSortedArraySolution().merge(array1, 0, array2, 1);
 		for (int i: array1) {
 			System.out.println(i);
 		}
@@ -19,7 +19,7 @@ class MergeSortedArraySolution {
 	 * @param nums2
 	 * @param n
 	 */
-	public void merge(int[] nums1, int m, int[] nums2, int n) {
+	public int[] merge(int[] nums1, int m, int[] nums2, int n) {
         int[] res = new int[m + n];
         
         int index1 = 0, index2 = 0;
@@ -45,6 +45,42 @@ class MergeSortedArraySolution {
         	}
         }
         
-        nums1 = res;
+        return res;
     }
+
+	/**
+	 * Notice another hint memtioned in the question: nums1 is long enough to hold additional elements from nums2,
+	 * which means, we could somehow store elements from nums2 to nums1.
+	 *
+	 * Since we are going to merge nums2 into nums1, is it possible for us to start from left to right?
+	 * Yes, but it's going to be lots of extra work. If an element from nums2 is inserted into nums1, we have to migrate
+     * all elements after this insertion position to right by 1 spot.
+     *
+     * We can start from back to front, right to left. The advantage is we do not need to relocate the elements after we
+     * insert an element from nums2 array.
+	 * @param nums1
+	 * @param m
+	 * @param nums2
+	 * @param n
+	 * @return
+	 */
+    public int[] merge2(int[] nums1, int m, int[] nums2, int n) {
+        int index = m + n - 1;
+        m--;
+        n--;
+
+        while (m >= 0 && n >= 0) {
+            if (nums2[n] > nums1[m]) {
+                nums1[index--] = nums2[n--];
+            } else {
+                nums1[index--] = nums1[m--];
+            }
+        }
+
+        if (n >= 0) {
+            while (n >= 0) {
+                nums1[index--] = nums2[n--];
+            }
+        }
+	}
 }
