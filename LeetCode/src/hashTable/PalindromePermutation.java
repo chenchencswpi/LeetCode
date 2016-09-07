@@ -1,6 +1,7 @@
 package hashTable;
 
 /**
+ * <a href="https://leetcode.com/problems/palindrome-permutation/">原文链接</a>
  * Given a string, determine if a permutation of the string could form a palindrome.
  * For example: "code" -> False, "aab" -> True, "carerac" -> True.
  */
