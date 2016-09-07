@@ -1,8 +1,7 @@
 package hashTable;
 
-import java.util.*;
-
 /**
+ * <a href="https://leetcode.com/problems/top-k-frequent-elements/">原文链接</a>
  * Given a non-empty array of integers, return the k most frequent elements.
  */
 
@@ -14,13 +13,15 @@ import java.util.*;
  *
  * 那么问题来了，我们要维护怎样的一个Collection呢？
  */
+
+import java.util.*;
+
+
 public class TopKFrequentElements {
     /**
      * 第一种方法，数组。
-     * @param nums
-     * @param k
-     * @return
      */
+
     public List<Integer> topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -79,10 +80,8 @@ public class TopKFrequentElements {
      * 可以看到，在第一种解法里，每当我们往数组里插入一个新的元素时，我们都要对整个数组进行排序。这样做非常的啰嗦，那么有没有更好的办法呢？
      * 摆渡翁当然是有更好的解法啦！那就是用 堆！
      * 在Java里，堆的功能是可以用PriorityQueue来实现的。
-     * @param nums
-     * @param k
-     * @return
      */
+
     public List<Integer> topKFrequent2(int[] nums, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
