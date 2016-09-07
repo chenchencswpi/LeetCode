@@ -13,9 +13,8 @@ public class LongestPalindromicSubstring {
 	/**
 	 * 首先是brute force.对于每个substring，我们来check它是不是回文。如果是，就去update一下。
 	 * 时间复杂度为O(n^2).
-	 * @param s
-	 * @return
 	 */
+
 	public String longestPalindrome(String s) {
         String longest = "";
         if (s == null || s.length() == 0) {
@@ -54,9 +53,8 @@ public class LongestPalindromicSubstring {
 	 * 那么问题来了，这种做法只能保证我们得到的回文字符串是奇数长度，那偶数长度的字符串咋办？莫慌，我们可以将偶数长字符串的最中间的两个字符作为拓展的中心。对
 	 * 于我们这种情况，可以将该字符和它下一个字符（如果两个字符是相同的）作为拓展中心即可！
 	 * 话不多说，上代码。
-	 * @param s
-	 * @return
 	 */
+
 	public String longestPalindrome2(String s) {
 		String longest = "";
 		
