@@ -26,10 +26,8 @@ public class AddTwoNumbers {
 	 * 我们可以建立一个新的链表用来存储结果。同时需要维护一个carry variable，存的是两个链表对应位置（例如个位对个位，十位对十位）的相加的和。加完后，创立一个node，
 	 * 将carry variable除以10得到的商放进去，然后将variable的十位的数字取出，参与下一轮的计算。为啥？想想咱小学时候学的两个数相加，比如5加7等于12，那咱就取2
 	 * 进1。就是这么个理。
-	 * @param l1
-	 * @param l2
-	 * @return
 	 */
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
@@ -53,7 +51,7 @@ public class AddTwoNumbers {
             runner = runner.next;
         }
 
-        if (res != 0) {	  //<--这个题的陷阱就在这儿。 如果carry varible还不是0，创建一个node给放进去。例如４０　＋　８０　＝　１２０，　这里的ｒｅｓ就是那个１.
+        if (res != 0) {	  //<--这个题的陷阱就在这儿。 如果carry varible还不是0，创建一个node给放进去。例如40 + 80 = 120, 这里的res就是那个１.
             runner.next = new ListNode(res);
         }
 
