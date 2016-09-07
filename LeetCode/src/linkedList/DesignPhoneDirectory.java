@@ -1,9 +1,5 @@
 package linkedList;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-
 /**
  * <a href="https://leetcode.com/problems/design-phone-directory/">原文链接（按住ctrl然后点链接）</a>
  * Design a Phone Directory which supports the following operations: （1）get: Provide a number which is not assigned to
@@ -20,6 +16,11 @@ import java.util.LinkedList;
  * 答案是：从问题入手，分析它想让我们实现的功能。根据所需的feature，来制定我们的data structure。
  * 好吧，纸上谈来终觉浅，我们来看看这个号码库。首先我们可以从数组下手，看看效果如何。
  */
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+
 public class DesignPhoneDirectory {
 	boolean[] flag;
     /** Initialize your data structure here
