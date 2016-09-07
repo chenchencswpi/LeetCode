@@ -5,8 +5,6 @@ package hashTable;
  * For example: "code" -> False, "aab" -> True, "carerac" -> True.
  */
 
-import java.util.HashMap;
-
 /**
  * 这道题是问一个字符串的变形会不会是回文。不管字符串如何变形，我们首先要探究的，是一个回文的字符串应该拥有怎样的特征？
  * 一般来讲，回文字符串有两种，一种是奇数长度的，例如: abcba，这样的字符串是以最中间的字符作为对称点，两边的字符以该对称点对称。
@@ -14,12 +12,13 @@ import java.util.HashMap;
  * 长度为奇数的字符串），剩下的字符全部出现偶数次。
  */
 
+import java.util.HashMap;
+
 public class PalindromePermutation {
     /**
      * 我们可以用哈希表来记录每个字符出现的次数。
-     * @param s
-     * @return
      */
+
     public boolean canPermutePalindrome(String s) {
         if (s == null || s.length() < 2) {
             return true;
@@ -55,9 +54,8 @@ public class PalindromePermutation {
      * 除了哈希表以外，我们还可以用别的数据结构，例如一个数组，来存储每个字母出现的次数。但是注意要和面试官核对一下字符串的字符集是什么？
      * 如果面试官说字符串只由a-z的小写字母组成，那么我们就可以定义一个长度为26的数组来记录就ok了。
      * 在这里我们假设字符集为ascii。
-     * @param s
-     * @return
      */
+
     public boolean canPermutePalindrome2(String s) {
         if (s == null || s.length() < 2) {
             return true;
