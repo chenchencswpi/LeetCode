@@ -1,17 +1,15 @@
 package array;
 
+/**
+ * <a href="https://leetcode.com/problems/merge-sorted-array/"></a>
+ * Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array. You may assume 
+ * that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. 
+ * The number of elements initialized in nums1 and nums2 are m and n respectively.
+ */
+
+
 public class MergeSortedArray {
 	
-	public static void main(String[] args) {
-		int[] array1 = {3}, array2 = {1};
-		array1 = new MergeSortedArraySolution().merge(array1, 0, array2, 1);
-		for (int i: array1) {
-			System.out.println(i);
-		}
-	}
-}
-
-class MergeSortedArraySolution {
 	/**
 	 * Create a new array to merge nums1 and nums2. Then assign this new array to m1.
 	 * @param nums1
@@ -84,3 +82,4 @@ class MergeSortedArraySolution {
         }
 	}
 }
+
