@@ -21,7 +21,7 @@ public class ReverseInteger {
 		//保证x是正数
 		int res = 0;
 		while (x > 0) {
-			if (res > Integer.MAX_VALUE / 10) { //为什么不写成res * 10 > Integer.MAX_VALUE呢？
+			if (res > Integer.MAX_VALUE / 10) { //为什么不能写成res * 10 > Integer.MAX_VALUE呢？
 				return 0;
 			}
 			int current = x % 10;
