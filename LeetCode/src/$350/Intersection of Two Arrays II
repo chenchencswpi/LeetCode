@@ -1,0 +1,22 @@
+Given two arrays, write a function to compute their intersection.
+
+Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2, 2].
+
+Note:
+Each element in the result should appear as many times as it shows in both arrays.
+The result can be in any order.
+Follow up:
+What if the given array is already sorted? How would you optimize your algorithm?
+What if nums1's size is small compared to nums2's size? Which algorithm is better?
+What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+
+这道题是249的变型题。与249不同的是，这道题要求我们记录在两个数组当中共同出现的元素的最多次数。例如在题目中，元素2在每个数组都出现了两次，
+那么元素2会在最终结果里也出现两次。
+
+首先，我们用一个哈希表记录其中一个数组的每个元素出现的次数。然后在遍历第二个数组的时候，如果哈希表里存在这个数，我们就将这个数字放入最终结果中，
+但同时也要记得去update这个哈希表，也就是说，这个数字对应的出现次数要减1。代码如下：
+
+//插入 intersect1 method
+
+然后，第一个follow up问，如果数组已经是排好序的，那么你该怎样去优化你的算法呢？
