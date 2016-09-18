@@ -19,4 +19,6 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 
 //插入 intersect1 method
 
-然后，第一个follow up问，如果数组已经是排好序的，那么你该怎样去优化你的算法呢？
+如果说两个数组都是已经排好序的，那么该怎么优化咱们的算法呢？我们可以从空间复杂度下手，因为两个数组已经排好序，那么我们只需要直接遍历就可以了。
+
+//插入 intersect2 method

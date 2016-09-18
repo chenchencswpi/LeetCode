@@ -54,4 +54,31 @@ public class IntersectionOfTwoArraysII {
         
         return res;
     }
+	
+	public int[] intersect2(int[] nums1, int[] nums2) {
+		List<Integer> res = new ArrayList<Integer>();
+        
+        int index1 = 0, index2 = 0;
+        while (index1 < nums1.length && index2 < nums2.length) {
+            if (nums1[index1] == nums2[index2]) {
+                res.add(nums1[index1]);
+                index1++;
+                index2++;
+            } else if (nums1[index1] < nums2[index2]) {
+                index1++;
+            } else {
+                index2++;
+            }
+        }
+        
+        int[] result = new int[res.size()];
+        int index = 0;
+        for (int number: res) {
+            result[index++] = number;
+        }
+        
+        return result;
+	}
 }
+
+
