@@ -1,0 +1,10 @@
+Given a digit string, return all possible letter combinations that the number could represent.
+
+For example, Input:Digit string "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+
+题目是问，给一个数字组成的字符串，让打印出所有的字母排列。这其实就像我们使用类似于九宫格的输入法一样，每个数字底下都对应好几个字母，
+然后这个题目让我们输出所有可能的字符排列。
+
+这是一道非常经典的backtracking问题，大家掌握了这道题的解法后，其他的backtracking问题的解法是很类似的。摆渡翁已经将比较重要的
+code进行了注释，大家直接看代码吧！
