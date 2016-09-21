@@ -1,0 +1,19 @@
+Given a non-negative integer n, count all numbers with unique digits, x, where 0 ≤ x < 10^n.
+
+Example:
+Given n = 2, return 91. (The answer should be the total numbers in the range of 0 ≤ x < 100, 
+excluding [11,22,33,44,55,66,77,88,99])
+
+题目的意思是，给定一个非负整数，让我们求出从0（inclusive）到10^n（exclusive）这些数字中所有数字都是unique的number的
+个数。说起来有点拗口。举个栗子，例如数字122，因为有重复的两个2，所以这样的数字是不行的。
+
+大家的第一反应是，我把所有的数字列出来，然后数一下个数就可以了。这种想法其实是可行的，难度就在于我们要用backtracking的方法
+来枚举出所有数字。如果大家对backtracking不熟悉，请参考我们的摆渡翁带你刷leetcode之第17题。好，看代码：
+
+//插入CountNumbersWithUniqueDigits类中的方法countNumbersWithUniqueDigits, process, exsiting和startWithZero。
+
+其实大家在做的过程中可能就在想，真的有必要把所有的数字都枚举出来吗？答案当然是no。假如给定的n等于3，那我们的取值范围应该是从
+0到999. 3其实也代表了我们能取数字的digits个数。如果只能取1个digit，那我们有10种选择，从0到9。如果能取两位，那第一位有9
+种选择（0不包括），第二位也有9种选择。如果能取更多位，那么第三位会有8中选择，第四位会有7种选择。。。以此类推。好了，看代码：
+
+//插入CountNumbersWithUniqueDigits2类中的countNumbersWithUniqueDigits方法。
