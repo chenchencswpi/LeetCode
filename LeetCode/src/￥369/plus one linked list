@@ -1,0 +1,25 @@
+Given a non-negative number represented as a singly linked list of digits, plus one to the number.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+Example:
+Input:
+1->2->3
+
+Output:
+1->2->4
+
+题目是问，给定一个用链表表示的非负数，给这个数加1。在这个链表里，最重要的位放在最头。
+
+leetcode里还有一道题跟这个很类似，但不同的是，那道题目中最重要的位放在最末尾。大家做那道题可能信手拈来，但过去的毕竟是过去了，
+“昨天所有的荣誉，都变成遥远的回忆”。那么我们来想想这道题怎么做？
+
+我们还是要维护一个carry值，用来存储目前的加和。但这道题目难就难在，在这样的一个单向链表里，怎样让这个carry值进行反向传递？例如，
+1->2->9，当我们给个位，也就是9，加了个1，现在的加和为10，我们需要将个位的值换成0，然后将这个1参加到下一位的运算中，也就是用1和
+十位上的2相加。但这是个单向链表，怎么将这个carry值从个位传递到十位？？
+
+现在就要体现出recursion的魅力了。在构造这个recursion方法的时候，base case是当前节点是个位，加个1，将carry值返回上一位。
+normal case是，将从下一个节点返回的carry值与当前node值相加，修改当前值后，将carry返回上一位。好了，说的够清楚了，大家直接
+看代码吧！
+
+//插入方法plusOne和process
