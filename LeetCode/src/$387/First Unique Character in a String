@@ -1,0 +1,17 @@
+Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+Examples:
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
+Note: You may assume the string contain only lowercase letters.
+
+题目的意思是，给定一个字符串，问第一个不重复出现的字母的下标是多少？并且可以假设字符串只包含小写字母。
+
+现在只要看到一道题目说一个字符串只包含小写字母，很自然而然的就想到了定义一个长度为26的数组之类的。。其实这也是个很好的想法。好了，言归正传，这道题该
+怎么做？其实做法非常的直接，字符串可以遍历两次，第一次用来记录每个字符出现的次数，第二次遍历的时候如果碰见某个字符只出现过一次，那么就可以直接返回其
+下标。
+
+//插入代码
