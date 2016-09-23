@@ -1,0 +1,19 @@
+Given a non-negative integer num represented as a string, remove k digits from the number so that 
+the new number is the smallest possible.
+
+Note:
+The length of num is less than 10002 and will be ≥ k.
+The given num does not contain any leading zero.
+
+这道题是问，给定一个由数字组成的字符串，怎样移除k个数字从而使得新的数字最小。
+
+拿到题别着急做，我们先来想一想给定一组数字，怎么拼凑它们才能得到最小的值呢？答案就是，如果这些数字排成升序，那么组成的数字最小。
+例如：一组数字1，2，3，4，5，如果它们的组合顺序是12345，那么肯定就是最小值。
+
+好了，回到这道题目。其实想法也大致相同，我们尽可能的让这些数字排成升序，从而获得最小值。我们来看题目给的第一个例子：num = "1432219", 
+k = 3。这个字符串里第二个数字比第一个大，那么是符合咱们的要求。到第三个数字时，它比第二个数字小，所以第二个数字就是可以被删除掉的。
+
+那么是不是说，只要我们看见一个数字比前几个数字都小，那么前几个数字就都可以删掉呢？当然不是了。如果说剩下的数字的个数比num.length() - k要少，
+那就肯定是不能被删除的，要不然就凑不出结果了。好了，代码如下：
+
+//插入代码
