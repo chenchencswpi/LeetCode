@@ -1,0 +1,16 @@
+Given a binary tree, collect a tree's nodes as if you were doing this: Collect and remove all leaves, 
+repeat until the tree is empty.
+
+Example:
+Given binary tree 
+          1
+         / \
+        2   3
+       / \     
+      4   5    
+Returns [4, 5, 3], [2], [1].
+
+这道题说白了是让我们按高度输出所有的节点。例如，先输出高度为0的，在输出高度为1的，以此类推。所以做法也就非常直接了，当我们看到一个
+节点时，先出处理其左节点，然后再处理又节点，然后是自身节点。代码如下：
+
+//按顺序插入findLeaves() 和 process()方法
