@@ -1,4 +1,4 @@
-package ￥369;
+package $369;
 
 class ListNode {
 	int val;
