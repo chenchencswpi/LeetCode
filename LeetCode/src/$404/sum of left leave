@@ -1,0 +1,16 @@
+Find the sum of all left leaves in a given binary tree.
+
+Example:
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.
+
+题目让找出所有左叶节点的值的和。注意一下，如果这个树里面只有一个根节点，这种情况它是不属于叶节点的，所以返回0.这道题
+比较简单，没有什么值得特别需要解释的地方，大家看代码：
+
+//插入方法sumOfLeftLeaves()
