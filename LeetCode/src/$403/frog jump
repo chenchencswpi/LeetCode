@@ -1,0 +1,25 @@
+A frog is crossing a river. The river is divided into x units and at each unit there may or may not exist a stone. 
+The frog can jump on a stone, but it must not jump into the water.
+
+Given a list of stones' positions (in units) in sorted ascending order, determine if the frog is able to cross the 
+river by landing on the last stone. Initially, the frog is on the first stone and assume the first jump must be 1 unit.
+
+If the frog's last jump was k units, then its next jump must be either k - 1, k, or k + 1 units. Note that the frog 
+can only jump in the forward direction.
+
+Note:
+
+The number of stones is ≥ 2 and is < 1,100.
+Each stone's position will be a non-negative integer < 231.
+The first stone's position is always 0.
+
+青蛙要过河。这条河被分成了x个单元，每个单元有可能有一个石头，也可能没有。青蛙只能跳到石头上，不能调到水里。现在输入是一个数组，每个单元里的数字代表
+了石头所在的位置，并且这个数组是升序的，然后问题是确认青蛙能不能成功过河，也就是跳到最后一个石头上。刚开始，青蛙在第一个石头上，并且限定第一次跳只能
+跳一个单元。除此之外，如果这个青蛙上一次跳了k个单元，那么它下次能跳k-1, k, k+1个单元。青蛙只能往前跳，不能往后跳。
+
+这道题可以用dfs来做。假设青蛙已经跳到了position x, 并且上次跳了k个单元，那么它下次跳跃有三种可能性，一种是跳到position x+k-1, 一种是
+跳到position x+k，一种是跳到position x+k+1。如此往复循环，当存在某种情况青蛙能跳到最后一个石头上，那么就证明青蛙能成功过河。代码如下：
+
+//插入方法canCross1（）和方法process()
+
+相信大家尝试了上面的方法后，会发现这种方法会超时。那么我们怎么去优化才能让我们的算法更有效率呢?因为上面的方法用到dfs，那么下面我们来尝试一下bfs的做法。
