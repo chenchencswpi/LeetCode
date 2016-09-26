@@ -23,3 +23,9 @@ The first stone's position is always 0.
 //插入方法canCross1（）和方法process()
 
 相信大家尝试了上面的方法后，会发现这种方法会超时。那么我们怎么去优化才能让我们的算法更有效率呢?因为上面的方法用到dfs，那么下面我们来尝试一下bfs的做法。
+其实做法也非常相似，只不过是新建一个类Entry，用来存储两个field：分别为当前index,和从上一个unit跳到当前unit的单元数。然后维护一个队列，不断加入合适的
+Entry对象，直到某个对象的index是数组的最后一个index。代码如下：
+
+//插入方法canCross3()和类Entry
+
+不幸的是，这种方法也会超时。看来不得不想想dp的做法了。
