@@ -1,0 +1,19 @@
+Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all 
+the values along the path equals the given sum.
+
+For example:
+Given the below binary tree and sum = 22,
+              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \      \
+        7    2      1
+return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+
+题目大意是，给定一个二叉树，问存不存在一条从根节点到叶节点的路径，在这条路径上所有节点的值的加和等于目标值。
+
+这道题也没什么难度。唯一需要注意的地方是节点为null是并不代表其值为0.
+
+//插入方法hasPathSum()
