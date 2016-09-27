@@ -1,0 +1,9 @@
+Given two binary trees, write a function to check if they are equal or not.
+
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+
+题目是说给定两个树，判断他们是不是相同的。
+
+题目的做法非常直接：不但要判断两个树的根节点的值是否相同，同时还要判断他们的左子树和右子树是否一致。
+
+//插入方法isSameTree()
