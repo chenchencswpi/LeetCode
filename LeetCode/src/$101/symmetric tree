@@ -19,3 +19,10 @@ Bonus points if you could solve it both recursively and iteratively.
 
 //插入方法isSymmetric(), isSame()
 
+然后问题又来了，面试官才到了我们可能会用dfs，也就是recursion的方法来解这道题，所以follow up的时候问能不能用iteratively的
+方法解决。其实说白了，就是bfs。那么怎么做呢？
+
+我们在做dfs的时候就已经感觉到了，对于节点a和节点b，我们不光是要比较它们的值是否相同，同时还要判断a的左节点是否和b的右节点相同，a
+的右节点是否和b的左节点相同。那么我们可以维护两个队列，一个队列只用来存左节点(相对于其父节点而言)，另一个队列只用来存右节点即可。
+
+//插入方法isSymmetric2()
