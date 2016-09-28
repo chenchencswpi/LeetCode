@@ -1,0 +1,34 @@
+Given a binary tree
+    struct TreeLinkNode {
+      TreeLinkNode *left;
+      TreeLinkNode *right;
+      TreeLinkNode *next;
+    }
+Populate each next pointer to point to its next right node. If there is no next right node, the next 
+pointer should be set to NULL. Initially, all next pointers are set to NULL.
+
+Note:
+You may only use constant extra space.
+You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent 
+has two children).
+For example,
+Given the following perfect binary tree,
+         1
+       /  \
+      2    3
+     / \  / \
+    4  5  6  7
+After calling your function, the tree should look like:
+         1 -> NULL
+       /  \
+      2 -> 3 -> NULL
+     / \  / \
+    4->5->6->7 -> NULL
+    
+题目的大意是说给定一个二叉树，里面三个成员变量分别是left child, right child和right sibling。初始的时候所有的right sibling
+都被设成null，现在让我们对所有的right sibling赋值。我们可以假设这个二叉树是perfect的，并且只允许用constant extra space.
+
+我们来分析一下上面的例子。例如我们现在在处理2节点和3节点，我们要做什么事情呢？首先让2指向3，然后还要让2的左孩子4指向2的右孩子5，让2的
+右孩子指向3的左孩子6，让3的左孩子指向3的右孩子7.好了大家看代码：
+
+//插入方法connect()和process()
