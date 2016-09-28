@@ -1,0 +1,22 @@
+Given a binary tree, find the maximum path sum.
+
+For this problem, a path is defined as any sequence of nodes from some starting node to any node 
+in the tree along the parent-child connections. The path does not need to go through the root.
+
+For example:
+Given the below binary tree,
+
+       1
+      / \
+     2   3
+Return 6.
+
+这道题的大意是，给定一个二叉树，找出那么一条路径从而使得这条路径上所有节点加起来的和是最大的。路径可以随意选择，但必须是父节点
+连接子节点这样的路径。路径可以不通过根节点。
+
+大家刚拿到这道题可能会比较慌，因为感觉是无从下手。但其实所有的题目，只要抓住其本质，都可以迎刃而解。好了咱们不瞎吹牛，我们来看看
+这道题怎么做。我们任意拿出一个节点来分析一下。如果这个节点参与进入一条路径，那么会有哪些情况呢？（1）自己作为这条路径的根节点，左右
+各有一条路径联通自己；（2）自己只是路径的一部分，那么这种情况下必须要从子左路径和子右路径里面跳出来一条大的，然后把自己加进去，返回
+给父节点；（3）自己作为路径的起始点，当老大。好了，看代码：
+
+//插入整个BinaryTreeMaximumPathSum类
