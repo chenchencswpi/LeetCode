@@ -1,0 +1,19 @@
+Given a binary tree, return all root-to-leaf paths.
+
+For example, given the following binary tree:
+
+   1
+ /   \
+2     3
+ \
+  5
+All root-to-leaf paths are:
+
+["1->2->5", "1->3"]
+
+给定一个二叉树，返回所有从根节点到叶节点的路径。
+
+对于每条路径，维护一个字符串，用来记录到目前节点所经历的所有节点。当遇到叶节点时，一条完整
+路径就算形成了。
+
+//插入方法binaryTreePaths()和process()
