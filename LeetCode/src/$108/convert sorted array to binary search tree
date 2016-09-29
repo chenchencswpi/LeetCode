@@ -1,0 +1,9 @@
+Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+
+给一个升序数组，将其转化成为一个高度平衡的二叉搜索树。
+
+为了能达到高度平衡，对于每个节点，我们就要尽量使其左右子树能够高度一致。由于题目给定的是升序数组，那么每次取我们都取该数组有效
+取值范围的最中间的值，作为根节点。例如，取这个树的根节点的时候，我们取数组1/2处的值，根节点的左孩子就取数组1/4处的值，右孩子
+取3/4处的值。以此类推。
+
+//插入方法sortedArrayToBST()和process()
