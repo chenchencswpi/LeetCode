@@ -1,0 +1,13 @@
+Given a singly linked list where elements are sorted in ascending order, 
+convert it to a height balanced BST.
+
+给定一个单向链表，所有的元素是按照升序存储的。将其转换成高度平衡的二叉搜索树。
+
+这道题和摆渡翁带你刷leetcode第108题基本上是一样的，只不过是将数组换成了单向链表。其实做法也是大致相同的，
+就是不断的找中点。大家可能很自然而然的联想到了用2 runners的方法去找中点，但是这样做是非常低效率的。相当于
+我们每次要构造一个树节点的时候，都需要将整个链表再走一遍。那么有没有更好的方法呢？
+
+其实我们可以用一个哈希表将整个链表存起来，坐标（也就是位置）作为key,ListNode自身作为value，这样问题就可以
+迎刃而解了。
+
+//插入方法sortedListToBST()和process()
