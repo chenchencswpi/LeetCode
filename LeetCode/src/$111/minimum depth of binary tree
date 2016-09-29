@@ -2,6 +2,12 @@ Given a binary tree, find its minimum depth.
 
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 
-题目的意思是给定一个二叉树，让我们返回其最小深度。最小深度的定义是从根节点到最近的叶节点这条路径上的节点数。
+题目的意思是给定一个二叉树，让我们返回其最小深度。最小深度的定义是从根节点到最近的叶节点这条路径上的节点数。首先我们来看一下dfs的做法：
 
-//插入方法minDepth()
+//插入方法minDepthDfs()
+
+一般来讲，dfs相对于bfs要直观一些，思路相对较为直接。那么我们来探讨一下这道题的bfs解法。在这道题里，如果我们要使用bfs,那就证明我们要一层一层的
+遍历二叉树，那么我们想办法记录下来每个节点的深度。当碰到了第一个左右孩子均为空的节点，就证明我们已经找到了深度最短的路径，只需返回该节点对应的深度
+即可。
+
+//插入方法minDepthBfs()
