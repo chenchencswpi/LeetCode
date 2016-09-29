@@ -1,0 +1,7 @@
+Given a binary tree, find its minimum depth.
+
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+题目的意思是给定一个二叉树，让我们返回其最小深度。最小深度的定义是从根节点到最近的叶节点这条路径上的节点数。
+
+//插入方法minDepth()
