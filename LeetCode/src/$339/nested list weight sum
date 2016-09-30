@@ -1,0 +1,17 @@
+Given a nested list of integers, return the sum of all integers in the list weighted by their depth.
+
+Each element is either an integer, or a list -- whose elements may also be integers or other lists.
+
+Example 1:
+Given the list [[1,1],2,[1,1]], return 10. (four 1's at depth 2, one 2 at depth 1)
+
+Example 2:
+Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 + 6*3 = 27)
+
+题目稍微有点绕，大意是说给定一个嵌套的整数列表，然我们返回所有的被加权后的整数的和，权重是整数的深度。列表里面的每一个元素
+可能是一个整数，也可能是一个包含了整数或者一个列表的整数的列表。
+
+题目的描述比较拗口，但是大家看看这两个例子应该有比较清楚题目大意了。那么怎么做呢？还是用dfs的方法。碰上整数的话，那么直接
+返回整数*权重，如果碰上一个列表，那么刨根问底把它的值求出来。
+
+//插入方法depthSum()和process()
