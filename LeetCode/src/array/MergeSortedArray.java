@@ -62,7 +62,7 @@ public class MergeSortedArray {
 	 * @param n
 	 * @return
 	 */
-    public int[] merge2(int[] nums1, int m, int[] nums2, int n) {
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
         int index = m + n - 1;
         m--;
         n--;
