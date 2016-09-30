@@ -1,0 +1,24 @@
+Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+
+For example:
+Given the below binary tree and sum = 22,
+              5
+             / \
+            4   8
+           /   / \
+          11  13  4
+         /  \    / \
+        7    2  5   1
+return
+[
+   [5,4,11,2],
+   [5,8,4,5]
+]
+
+这道题其实跟摆渡翁带你刷leetcode第112题基本是一样的，只不过第112题是让咱们判断有没有这样一条路径即可，但这道题是让我们输出所有
+路径。但其实方法是一样的。我们创建一个list，来存储目前的路径上的所有节点的值，但值得注意的是，当我们将这个list往子节点传递的时候，
+我们要创建一个新的list，而不能将目前的list传递下去。为什么呢？因为java是按值传递的。例如上面的例子，当我们处理到节点11的时候，
+如果将目前的list（里面存了5，4，11）传递给左孩子，左孩子处理完后，list变成了5，4，11，7，但因为11将相同的list又传递给了2，那么当
+处理节点2的时候，现在的list就变成了5，4，11，7，2了，那结果显然就不对了。好了看代码：
+
+//插入方法pathSum() 和 process()
