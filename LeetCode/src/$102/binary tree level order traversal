@@ -1,0 +1,22 @@
+Given a binary tree, return the level order traversal of its nodes' values. 
+(ie, from left to right, level by level).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+
+这道题是让我们按层来遍历一个二叉树，并且对于每层，输出的值的顺序应该是从左往右。
+
+这道题是非常典型的bfs题目。我们可以维护两个队列，分别用来存储树节点和其对应的深度。代码如下：
+
+//插入方法levelOrder()
