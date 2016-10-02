@@ -14,4 +14,4 @@ Note: You may assume the string contain only lowercase letters.
 怎么做？其实做法非常的直接，字符串可以遍历两次，第一次用来记录每个字符出现的次数，第二次遍历的时候如果碰见某个字符只出现过一次，那么就可以直接返回其
 下标。
 
-//插入代码
+//插入代码firstUniqChar()方法
