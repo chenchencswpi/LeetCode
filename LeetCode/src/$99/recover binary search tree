@@ -1,0 +1,17 @@
+Two elements of a binary search tree (BST) are swapped by mistake.
+
+Recover the tree without changing its structure.
+
+Note:
+A solution using O(n) space is pretty straight forward. Could you devise 
+a constant space solution?
+
+题目的大意是在一个二叉搜索树里面，两个节点不小心（其实就是故意的）给交换了，让我们去恢复这个二叉搜索树。
+
+其实想法非常直接，那就是做一次中序遍历，将所有的节点存到一个数组里面。然后我们遍历数组，发现有问题的节点。
+为什么是中序遍历呢？因为对于一个BST而言，中序遍历时所有的元素是按照升序遍历的。当我们得到了这个数组以后，
+找出来两对儿有问题的节点，最后交换他们存的val值就可以了。但是题目说了，用O(n)空间的方法地球人都知道，能
+不能想出一个O(1)空间的方法呢？其实我们遍历的时候，维护一个全局变量用来存储处理现有节点时，前一个节点的信息，
+每次和前一个节点比较数值大小关系就好了。具体看代码：
+
+//插入整个RecoverBinarySearchTree类
