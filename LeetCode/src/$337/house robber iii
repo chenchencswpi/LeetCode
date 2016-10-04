@@ -1,0 +1,30 @@
+The thief has found himself a new place for his thievery again. There is only one entrance to 
+this area, called the "root." Besides the root, each house has one and only one parent house. 
+After a tour, the smart thief realized that "all houses in this place forms a binary tree". 
+It will automatically contact the police if two directly-linked houses were broken into on the 
+same night.
+
+Determine the maximum amount of money the thief can rob tonight without alerting the police.
+
+Example 1:
+     3
+    / \
+   2   3
+    \   \ 
+     3   1
+Maximum amount of money the thief can rob = 3 + 3 + 1 = 7.
+Example 2:
+     3
+    / \
+   4   5
+  / \   \ 
+ 1   3   1
+Maximum amount of money the thief can rob = 4 + 5 = 9.
+
+小偷偷钱问题又升级了，这次不偷array，改偷tree了。真是感慨这个小偷真是厉害，还知道所有的房子组成的结构叫做二叉树。。
+好，雷人过后，我们来看一下这道题。在这个二叉树里，不能父节点和子节点同时偷，要不就会报警。
+
+这道题是dfs和dp的结合。我们来分析一下基本的情况。对于每一个节点来说，只有两种情况，要不就偷，要不就不偷。那么对于每个
+节点，我们返回两个值，一个是偷了该节点后目前偷的最多的钱数，一个是不偷该节点能获得的最大的钱数。好了咱们看代码：
+
+//插入方法rob()和dfs()
