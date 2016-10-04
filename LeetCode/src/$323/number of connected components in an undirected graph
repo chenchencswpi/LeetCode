@@ -1,0 +1,29 @@
+Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), 
+write a function to find the number of connected components in an undirected graph.
+
+Example 1:
+     0          3
+     |          |
+     1 --- 2    4
+Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], return 2.
+
+Example 2:
+     0           4
+     |           |
+     1 --- 2 --- 3
+Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.
+
+Note:
+You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is 
+the same as [1, 0] and thus will not appear together in edges.
+
+给定一个无向图，问有多少独立的连接部分。例如在例1中，0，1，2组成了一个整体，3，4，组成了一个整体，所以一共有两个独立的连接部分。
+
+这道题dfs或者bfs都是可以做的。首先我们来看dfs解法。对于一个节点，我们尽可能的找出从该节点能够到达的所有节点，它们就可以组成一个整体。
+代码如下：
+
+//插入方法countComponentsDFS()和dfs()
+
+bfs的解法和常规bfs稍微有点不一样。在这道题里，有多少个独立的components就要做几次bfs，不像是其他题call一次bfs函数就可以了。
+
+//插入方法countComponentsBFS()和bfs()
