@@ -1,0 +1,13 @@
+Given a positive integer n, find the least number of perfect square numbers 
+(for example, 1, 4, 9, 16, ...) which sum to n.
+
+For example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 
+2 because 13 = 4 + 9.
+
+这道题目的大意是，给定一个正整数，最少用多少个完美平方数的和来组成这个数？
+
+这道题目是一个dp问题（数学解法不纳入摆渡翁带你刷leetcode的讨论范围）。我们可以建立一个数组，每个cell就
+代表了构成该数的最少的完美平方数的个数。那么对于一个特定的数，如果其自身就是一个完美平方数了，那么就在cell
+里面填上1，如果不是的话，我们需要遍历比它小的数，看看有哪些可能的完美平方数组合能构成该数。好了看代码：
+
+//插入方法numSquares()
