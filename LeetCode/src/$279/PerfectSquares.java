@@ -7,7 +7,7 @@ public class PerfectSquares {
         int[] dp = new int[n + 1];
         Arrays.fill(dp, Integer.MAX_VALUE);
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j * j <= i; j++) {
+            for (int j = 1; j * j <= i; j++) {	//不需要遍历所有数字
                 if (j * j == i) {
                     dp[i] = 1;
                 } else if (j * j < i) {
