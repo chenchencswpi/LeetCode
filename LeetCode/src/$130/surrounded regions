@@ -1,0 +1,30 @@
+Given a 2D board containing 'X' and 'O' (the letter O), capture all regions surrounded by 'X'.
+
+A region is captured by flipping all 'O's into 'X's in that surrounded region.
+
+For example,
+X X X X
+X O O X
+X X O X
+X O X X
+After running your function, the board should be:
+
+X X X X
+X X X X
+X X X X
+X O X X
+
+题目的大意是，给定一个二维数组只包含字符X和O(XO?),让我们找出所有被X包围的区域。在这个区域里，如果有'O'，那么就将其变成'X'。
+
+咱们先分析一下什么样的O才可以被保留至最后呢？仔细观察，不难发现，如果一个O在边界上，那么它肯定是不会被包围的。而且从这个边界上
+的O进行扩展，所能到达的所有的O都是能被最后保留下来的。
+
+这道题DFS和BFS都是可以做的。首先我们来看DFS解法：
+
+//插入方法solveDFS()和dfs()
+
+很遗憾的是，dfs会导致stack overflow。那么我们再来看看bfs的解法:
+
+//插入方法solveBFS()和bfs()
+
+值得注意的是，一定要先将一个cell标记成'#'再将其放入队列中，要不然会导致超时。
