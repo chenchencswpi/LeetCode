@@ -1,0 +1,46 @@
+For a undirected graph with tree characteristics, we can choose any node as the root. 
+The result graph is then a rooted tree. Among all possible rooted trees, those with minimum 
+height are called minimum height trees (MHTs). Given such a graph, write a function to find 
+all the MHTs and return a list of their root labels.
+
+Format
+The graph contains n nodes which are labeled from 0 to n - 1. You will be given the number n 
+and a list of undirected edges (each edge is a pair of labels).
+
+You can assume that no duplicate edges will appear in edges. Since all edges are undirected, 
+[0, 1] is the same as [1, 0] and thus will not appear together in edges.
+
+Example 1:
+
+Given n = 4, edges = [[1, 0], [1, 2], [1, 3]]
+
+        0
+        |
+        1
+       / \
+      2   3
+return [1]
+
+Example 2:
+
+Given n = 6, edges = [[0, 3], [1, 3], [2, 3], [4, 3], [5, 4]]
+
+     0  1  2
+      \ | /
+        3
+        |
+        4
+        |
+        5
+return [3, 4]
+
+给一个具有树的特性的无向图（也就是没有环啦），我们可以选取任意节点作为根节点，所以其实这个图也就是一个树。在所有的树中，
+哪些高度最小的树被称作高度最小树。给定一个图，写一个方法来返回所有的高度最小树的根节点编号。
+
+刚开始大家做这道题的第一反应肯定是BFS，因为每一个节点都可能是根节点，那么我们就尝试将每个节点都作为根节点，然后用BFS的
+方法将树构建起来，想办法搞出高度。但实现起来确实不好实现，不像dfs很容易track高度，所以我们要另辟蹊径，想一个别的办法。
+
+我们可以将这颗树一层一层的剥掉，从叶节点开始入手。剥到最后只剩下一个或者两个节点的时候，它们就可以作为最终结果被返回了。
+那怎么确定一个节点是不是叶节点呢？很容易，如果它的neighbor个数为1就是了。好了看代码：
+
+//插入方法findMinHeightTrees()
