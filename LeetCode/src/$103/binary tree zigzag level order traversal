@@ -1,0 +1,25 @@
+Given a binary tree, return the zigzag level order traversal of its nodes' values. 
+(ie, from left to right, then right to left for the next level and alternate between).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    	3
+       / \
+      9  20
+     /   /  \
+    8   15   7
+return its zigzag level order traversal as:
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+
+题目的大意是，给定一个二叉树，让我们Z字型遍历。什么叫Z字型？例如当前层是从左到右遍历，那么下一层就要从右往左遍历了。
+
+这还是一道bfs题目，我们在遍历当前层的时候，要想办法把下一层的节点存起来。可以用队列吗？例如我们正在处理根节点3，因为
+我们知道下一层应当是从右往左，那么我们维护一个队列，先将20加进去，然后加9.但问题就出在再下一层。因为到了第三层，应当是
+从左往右，也就是说，我们先处理8，然后才能到15.但是目前我们队列的第一位是20，也就是说我们先接触的是20的子节点，并不是9
+的子节点。所以队列是不可以的。那估计大家也看出来了，栈应当是最合适的选择。好了大家看代码体会吧！
+
+//插入方法zigzagLevelOrder()
