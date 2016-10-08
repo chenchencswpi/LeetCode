@@ -1,0 +1,24 @@
+There are a total of n courses you have to take, labeled from 0 to n - 1.
+
+Some courses may have prerequisites, for example to take course 0 you have to first take course 1, 
+which is expressed as a pair: [0,1]
+
+Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+
+For example:
+
+2, [[1,0]]
+There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
+
+2, [[1,0],[0,1]]
+There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 
+you should also have finished course 1. So it is impossible.
+
+题目的大意是，现在一共有n门课，将它们标记为0到n-1。修有的课程可能需要先修别的课程才可以。那么给定课程数量和一系列的修课条件，问最后能不能
+顺利的把所有课程都修完呢？
+
+这道题是非常经典的拓扑排序题，摆渡翁建议大家讲此题一定要吃透。什么叫拓扑？就是说做B事情之前一定要先做A事，例如早上起床穿衣服，一定要先穿内裤才能
+穿外面的裤子（超人是个特例，内裤外穿）。那么这道题怎么做呢？我们先找出不依赖其他课程的课，这些课肯定是要先修的。然后我们假设这些课已经修完了，再去
+遍历剩下的课，看看有哪些课是依赖于刚才修过的课程的。。以此类推。好了我们看代码：
+
+//插入方法canFinish()
