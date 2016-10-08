@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeRightSideView {
-	public List<Integer> rightSideViewBFS(TreeNode root) {
+	public List<Integer> rightSideViewDFS(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         process(res, root, 0);
         return res;
@@ -23,7 +23,7 @@ public class BinaryTreeRightSideView {
         process(res, node.left, level + 1);
     }
     
-    public List<Integer> rightSideViewDFS(TreeNode root) {
+    public List<Integer> rightSideViewBFS(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         if (root == null) {
             return res;
