@@ -19,4 +19,4 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 字符串里很有可能还有别的加密字符串。所以这道题我们用dfs处理。这道题写起来需要考虑很多的case，摆渡翁在代码里做了比较多的注释，大家边看
 边理解。代码如下:
 
-//插入方法
+//插入方法decodeString(), process()，和getOneLevel()
