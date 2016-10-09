@@ -1,0 +1,26 @@
+Given a string which consists of lowercase or uppercase letters, find the length of the 
+longest palindromes that can be built with those letters.
+
+This is case sensitive, for example "Aa" is not considered a palindrome here.
+
+Note:
+Assume the length of given string will not exceed 1,010.
+
+Example:
+
+Input:
+"abccccdd"
+
+Output:
+7
+
+Explanation:
+One longest palindrome that can be built is "dccaccd", whose length is 7.
+
+题目的大意是给我们一个只由小写字母和大写字母构成的字符串，让我们找出由这些字符构成的最长的回文字符串的长度。
+
+我们大致分析一下，应当有这么三种情况：（1）如果一个字符出现了偶数次，那么所有的该字符都会被用来构建最后的回文字符串；
+（2）如果一个字符只出现了一次，那么它有可能会加入到结果中；（3）如果一个字符出现了奇数次，但是大于1次，那么它的n-1个
+字符会参加到最后结果中，至于剩下的那个，有可能会加入到最终结果中。好了看代码：
+
+//插入方法longestPalindrome()
