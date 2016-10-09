@@ -1,0 +1,26 @@
+Given an array nums and a target value k, find the maximum length of a subarray that sums to k. 
+If there isn't one, return 0 instead.
+
+Note:
+The sum of the entire nums array is guaranteed to fit within the 32-bit signed integer range.
+
+Example 1:
+Given nums = [1, -1, 5, -2, 3], k = 3,
+return 4. (because the subarray [1, -1, 5, -2] sums to 3 and is the longest)
+
+Example 2:
+Given nums = [-2, -1, 2, 1], k = 1,
+return 2. (because the subarray [-1, 2] sums to 1 and is the longest)
+
+Follow Up:
+Can you do it in O(n) time?
+
+题目的大意是说，给定一个数组，和一个目标数字，让我们找出一个最长的子数组，其所有元素的和为k。
+
+大家首先会想到蛮力算法，对于每个下标，遍历后面的所有元素，看看能不能发现一个子数组，sum为k。并且维护一个max变量，只要找到符合
+条件的子数组，我们就去update这个变量。但是follow up里问我们能不能想到一个O(n)算法呢？
+
+我们维护一个哈希表，用来存储从数组刚开始到目前下标的所有元素的和。key就是和，value就是下标。例如我们想要知道数组从下标i到j的所有
+元素的和，那么只需知道sum(j) - sum(i - 1)就可以了。看代码:
+
+//插入方法maxSubArrayLen()
