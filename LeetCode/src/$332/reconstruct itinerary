@@ -1,0 +1,24 @@
+Given a list of airline tickets represented by pairs of departure and arrival airports [from, to], 
+reconstruct the itinerary in order. All of the tickets belong to a man who departs from JFK. Thus, 
+the itinerary must begin with JFK.
+
+Note:
+If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical 
+order when read as a single string. For example, the itinerary ["JFK", "LGA"] has a smaller lexical 
+order than ["JFK", "LGB"].
+All airports are represented by three capital letters (IATA code).
+You may assume all tickets form at least one valid itinerary.
+Example 1:
+tickets = [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
+Return ["JFK", "MUC", "LHR", "SFO", "SJC"].
+Example 2:
+tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+Return ["JFK","ATL","JFK","SFO","ATL","SFO"].
+Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"]. But it is larger in lexical order.
+
+这道题的大意是，给我们一些机票，用[出发，到达]的对儿表示，那么让我们重新构建行程。并且规定了必须从“JFK”出发。
+
+注意到题目里要求我们返回的这个行程必须是字符排列最小，也就是说LGA是优于LGB的。那既然这样，我们可以考虑使用优先队列，用来存储从
+某个城市能直飞到别的所有的城市。看代码：
+
+//插入方法findItinerary()和dfs()
