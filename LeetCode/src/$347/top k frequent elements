@@ -1,0 +1,15 @@
+Given a non-empty array of integers, return the k most frequent elements.
+
+For example,
+Given [1,1,1,2,2,3] and k = 2, return [1,2].
+
+Note: 
+You may assume k is always valid, 1 ≤ k ≤ number of unique elements.
+Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+题目的大意是，输入一个整形数组，让我们返回出现频率最高的K个数。
+
+一般题目中出现最高的K个，最大的K个。。。之类的，我们第一反应应该都是用堆。像这道题，我们维护一个最小堆，当堆的尺寸超过了
+K，我们就将root（出现频率最低的元素）弹出，这样到最后，我们会留下出现频率最高的K个。
+
+//插入整个类
