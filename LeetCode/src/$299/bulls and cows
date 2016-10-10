@@ -1,0 +1,28 @@
+You are playing the following Bulls and Cows game with your friend: You write down a number and ask your 
+friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates 
+how many digits in said guess match your secret number exactly in both digit and position (called "bulls") 
+and how many digits match the secret number but locate in the wrong position (called "cows"). Your friend 
+will use successive guesses and hints to eventually derive the secret number.
+
+For example:
+
+Secret number:  "1807"
+Friend's guess: "7810"
+Hint: 1 bull and 3 cows. (The bull is 8, the cows are 0, 1 and 7.)
+Write a function to return a hint according to the secret number and friend's guess, use A to indicate the 
+bulls and B to indicate the cows. In the above example, your function should return "1A3B".
+
+Please note that both secret number and friend's guess may contain duplicate digits, for example:
+
+Secret number:  "1123"
+Friend's guess: "0111"
+In this case, the 1st 1 in friend's guess is a bull, the 2nd or 3rd 1 is a cow, and your function should return "1A1B".
+You may assume that the secret number and your friend's guess only contain digits, and their lengths are always equal.
+
+公牛母牛游戏。你写了个数字让朋友猜。每次他做出一次猜测，你需要给你的朋友一个提示，告诉他猜对了几个（位置和数字全部吻合），猜错了几个（数字
+符合，但是位置不合）。猜对的叫公牛，猜错的叫母牛。现在给一个secret数字，也就是朋友要猜的，再给一个guess数字，让你返回有几个公牛，几个母牛。
+
+这道题可以用哈希表来做。首先我们遍历两个字符串，找出公牛数，并且将secret数字中，与guess数字相应位置不符合的字符以及其个数存起来。然后我们
+再遍历两个字符串来找出母牛数。其实这道题也不需要哈希表，因为我们知道每个字符肯定是‘0’到‘9’的10个字符中的一个，所以设定一个长度为10的数组就好。
+
+//插入方法getHint()
