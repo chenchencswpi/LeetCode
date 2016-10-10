@@ -1,0 +1,17 @@
+Given two strings s and t, write a function to determine if t is an anagram of s.
+
+For example,
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+
+Note:
+You may assume the string contains only lowercase alphabets.
+
+Follow up:
+What if the inputs contain unicode characters? How would you adapt your solution to such case?
+
+给两个字符串，让我们确定t是不是s的变形词。
+
+既然题目说了字符串只由小写字母构成，那么我们维护一个长度为26的数组来记录每个字符出现的多少次就可以了。
+
+//插入方法isAnagram()
