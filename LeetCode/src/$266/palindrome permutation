@@ -1,0 +1,12 @@
+Given a string, determine if a permutation of the string could form a palindrome.
+
+For example,
+"code" -> False, "aab" -> True, "carerac" -> True.
+
+题目的大意是，给定一个字符串，问是否会有一个该字符串的变形字符串是回文的。
+
+我们来想想符合回文的字符串的特性。回文字符串分为两种，一种是奇数长度，那么字符串是根据最中间的那个字符做镜像对称。还有一种是偶数
+长度的，那前半段字符串和后半段字符串是镜像对称的。我们总结一下，如果要构成一个字符串，所有字符应当都出现偶数次，并且最多允许只有
+一个字符出现奇数次。
+
+//插入方法canPermutePalindrome()
