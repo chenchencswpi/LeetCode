@@ -1,0 +1,26 @@
+This is a follow up of Shortest Word Distance. The only difference is now you are given the list 
+of words and your method will be called repeatedly many times with different parameters. How would 
+you optimize it?
+
+Design a class which receives a list of words in the constructor, and implements a method that takes 
+two words word1 and word2 and return the shortest distance between these two words in the list.
+
+For example,
+Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
+
+Given word1 = “coding”, word2 = “practice”, return 3.
+Given word1 = "makes", word2 = "coding", return 1.
+
+Note:
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
+
+这是摆渡翁带你刷leetcode第243题的follow up。和那道题不同的是，现在经常要去调用这个判断两个单词之间距离的方法，问问我们怎么能、
+对以前的solution进行优化。
+
+这道题让我们设计一个类，在constructor里面就传进来一个list的单词，并让我们实现一个方法，这个方法将两个单词作为参数，并且返回它们
+之间的最短距离。
+
+既然经常要调用这个求距离的方法，那我们不能每次都去遍历整个数组来计算最短距离了。我们可以用一个哈希表来记录每个单词以及它出现的所有的
+位置。那么每当我们得到两个单词的时候，我们去哈希表里查找他们的位置，并且计算最短距离。
+
+//插入整个ShortestWordDistanceII类
