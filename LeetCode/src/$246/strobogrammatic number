@@ -1,0 +1,10 @@
+A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+
+Write a function to determine if a number is strobogrammatic. The number is represented as a string.
+
+一个strobogrammatic数字是说将其颠倒180度（上下颠倒），看起来也是一样的。让我们写一个方法来检查一个数字是不是strobogrammatic。
+
+颠倒过后看起来一样的数字对有这么几个，0和0， 1和1， 6和9， 8和8，9和6。我们用双指针法左右同时比较，如果左右的字符并不属于这几个数字对
+的任意一对，那就返回false。
+
+//插入方法isStrobogrammatic()
