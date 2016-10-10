@@ -1,0 +1,18 @@
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+UPDATE (2016/2/13):
+The return format had been changed to zero-based indices. Please read the above updated description carefully.
+
+给一个整数数组，让我们返回两个元素的下标，这两个元素的和是目标数字。你可以假设每个输入只有一个解。
+
+我们用一个哈希表来记录每个元素出现的位置。当我们遍历数组碰到一个元素的时候，我们首先去查它心仪的另一半是不是在哈希表里，如果有的话直接放入数组
+里返回就可以了。
+
+//插入方法twoSum()
