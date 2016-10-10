@@ -1,0 +1,19 @@
+Given a list of words and two words word1 and word2, return the shortest distance between 
+these two words in the list.
+
+For example,
+Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
+
+Given word1 = “coding”, word2 = “practice”, return 3.
+Given word1 = "makes", word2 = "coding", return 1.
+
+Note:
+You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
+
+题目的大意是，给我们一列单词和两个单词word1，word2，让我们返回这两个单词在这一列单词中的最短距离。我们可以假设两个
+单词不同并且他们都在这个list里边。
+
+我们用两个整形变量来track两个word最新出现的下标，再维护一个变量来记录目前两个单词的最小距离。每当找到word1或者word2
+的时候就去update它们之间的最短距离。
+
+//插入方法shortestDistance()
