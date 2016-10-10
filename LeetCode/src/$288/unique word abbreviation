@@ -1,0 +1,35 @@
+An abbreviation of a word follows the form <first letter><number><last letter>. Below are some 
+examples of word abbreviations:
+
+a) it                      --> it    (no abbreviation)
+
+     1
+b) d|o|g                   --> d1g
+
+              1    1  1
+     1---5----0----5--8
+c) i|nternationalizatio|n  --> i18n
+
+              1
+     1---5----0
+d) l|ocalizatio|n          --> l10n
+Assume you have a dictionary and given a word, find whether its abbreviation is unique in the 
+dictionary. A word's abbreviation is unique if no other word from the dictionary has the same abbreviation.
+
+Example: 
+Given dictionary = [ "deer", "door", "cake", "card" ]
+
+isUnique("dear") -> false
+isUnique("cart") -> true
+isUnique("cane") -> false
+isUnique("make") -> true
+
+作为一道easy难度的题，这道题的通过率之低，简直让人瞠目结舌！！这和题目的阐述不清楚，是分不开关系的！那摆渡翁在这里带大家重新走一遍这道题。
+
+首先是怎么缩写一个字符串，这个还是比较清楚的，也就是取第一个字母，跟着中间字符串（掐头去尾）的长度，然后是最后一个字母。对于长度小于3的字符串，
+其缩写字符串就是自己本身。那么这道题是个啥意思呢？大致翻译一下，就是说给一个字典，然后再给一个字符串，问这个字符串的缩写在这个字典里是不是unique的。
+如果unique，就代表这个字典里的其他单词和该字符串的缩写是不一样的。陷阱是什么呢？就是它给的例子。我们来看为什么isUnique("dear")返回的是false
+呢？其实并不是因为"deer"或者"door"的缩写"d2r"和"dear"的缩写是一样的，而是因为"deer"和"door"的缩写重复了，导致现在字典里虽然有"d2r"的缩写，
+但是它已经不能和任何单词挂钩了。好了，既然我们认清楚题目含糊的地方，那问题就可以迎刃而解了。大家看代码：
+
+//插入整个UniqueWordAbbreviation类
