@@ -1,0 +1,24 @@
+Given a string, we can "shift" each of its letter to its successive letter, for example: 
+"abc" -> "bcd". We can keep "shifting" which forms the sequence:
+
+"abc" -> "bcd" -> ... -> "xyz"
+Given a list of strings which contains only lowercase alphabets, group all strings that 
+belong to the same shifting sequence.
+
+For example, given: ["abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"], 
+A solution is:
+
+[
+  ["abc","bcd","xyz"],
+  ["az","ba"],
+  ["acef"],
+  ["a","z"]
+]
+
+给一个字符串，我们可以移动其每一个字符到它相邻的字符。如果我们持续移动，那就会形成一个序列。现在给我们一列只有小写字母
+的字符串，让我们将属于同一移动序列的字符串放在一起。
+
+对于一个字符串，我们也不清楚它属于哪个移动序列，所以我们可以找到其对应的以'a'为第一个字符的字符串。对于多个字符串，如果要
+判断他们是否属于同一序列，那么比较它们以'a'为首字符的字符串是否相同即可。
+
+//插入方法groupStrings()和getShifted()
