@@ -1,0 +1,6 @@
+Given an array of integers, find if the array contains any duplicates. Your function should return 
+true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+给定一个整形数组，让我们找出这个数组是否含有重复元素。如果有任意元素出现了至少两次，返回true，如果所有元素都是唯一的，就返回false。
+
+//插入方法containsDuplicate()
