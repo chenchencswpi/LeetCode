@@ -1,0 +1,18 @@
+Given a binary tree, return the inorder traversal of its nodes' values.
+
+For example:
+Given binary tree [1,null,2,3],
+   1
+    \
+     2
+    /
+   3
+return [1,3,2].
+
+给一个二叉树，让我们做一次中序遍历。其实recursion的方法很好做，但题目让我们用iteration的方法来做，毕竟recursion的方法地球人都知道。
+那我们来分析一下这道题应该怎么做。中序遍历是先处理左子树，然后处理自身，最后再处理右子树。那如果要用iteration的方法，例如我们处理到左子树
+的某个节点，我们要想办法返回到根节点，因为根节点是唯一让我们进入右子树的途径，这就需要我们将节点想办法存起来。然后另一个要注意的就是最开始我们
+碰到的节点其实是最后才处理的，例如上面的例子，我们先碰到2节点，然后才是3节点，但处理的时候，我们先处理完以3为根的子树才会返回2节点。所以我们
+要用到栈来存储。
+
+//插入方法inorderTraversal()
