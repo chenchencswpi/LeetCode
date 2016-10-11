@@ -1,0 +1,17 @@
+Given an array of strings, group anagrams together.
+
+For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"], 
+Return:
+
+[
+  ["ate", "eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+
+题目大意是给我们一个字符串数组，让我们将变形词聚合在一起。
+
+我们看到如果两个单词同属于一组变形词，那么他们的字符构成都是相同的。如果我们将这两个字符串各自排序，那么排序后的字符串也是相同的。
+那我们可以建立一个哈希表，key是排序后的字符串，value就是一个动态数组来存放所有的属于该变形词组的变形词。
+
+//插入方法groupAnagrams()和getKey()
