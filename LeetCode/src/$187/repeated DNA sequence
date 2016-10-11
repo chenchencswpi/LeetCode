@@ -1,0 +1,18 @@
+All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: "ACGAATTCCG". 
+When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
+
+Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
+
+For example,
+
+Given s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT",
+
+Return:
+["AAAAACCCCC", "CCCCCAAAAA"].
+
+所有的DNA都是由一系列的核苷酸构成的，这些核苷酸简写为A,C,G,T。当我们在研究DNA的时候，有时候识别重复的DNA序列是很有用的。那么问题来了，
+能不能写一个方法，用来找到所有的10个字母长的在一个DNA分子里重复出现的序列。
+
+我们可以维护一个哈希表来记录当前已经出现过的所有的长度为10的字符串。注意，我们同时还需要维护一个哈希表来维护已经重复出现过的字符串，目的是为了去重。
+
+//插入方法findRepeatedDnaSequences()
