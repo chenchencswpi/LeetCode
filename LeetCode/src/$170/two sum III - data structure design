@@ -1,0 +1,16 @@
+Design and implement a TwoSum class. It should support the following operations: add and find.
+
+add - Add the number to an internal data structure.
+find - Find if there exists any pair of numbers which sum is equal to the value.
+
+For example,
+add(1); add(3); add(5);
+find(4) -> true
+find(7) -> false
+
+这道题让我们设计一个TwoSum类，要求实现两个运算，加和查找。加需要我们将一个数字添加至我们的内部数据结构中，查找是问我们存不存在
+一对儿数字似的他们的和等于输入值。
+
+维护一个哈希表，key是数字，value是该数字出现的次数。
+
+//插入整个TwoSum类
