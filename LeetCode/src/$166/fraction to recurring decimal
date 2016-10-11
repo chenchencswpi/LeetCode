@@ -1,0 +1,16 @@
+Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.
+
+If the fractional part is repeating, enclose the repeating part in parentheses.
+
+For example,
+
+Given numerator = 1, denominator = 2, return "0.5".
+Given numerator = 2, denominator = 1, return "2".
+Given numerator = 2, denominator = 3, return "0.(6)".
+
+给一个除数，一个被除数，让我们用字符串的形式返回除法结果。如果小数部分有重复，那么将重复的部分用括号包起来。
+
+整数部分我们就忽略不讨论了，着重看一下小数部分。那么我们怎么知道一个除法的小数部分会重复出现呢？其实我们在做除法的时候，如果发现被除数会重复
+的出现，那么被除的结果肯定也会重复出现。我们可以建立一个哈希表，key是被除数，value就是当我们遇到这个被除数时其相除结果在最终结果的位置。
+
+//插入方法fractionToDecimal()
