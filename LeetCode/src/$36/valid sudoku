@@ -1,0 +1,13 @@
+Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
+
+The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+
+Note:
+A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+
+问我们一个还未被解开的数独是不是有效的。
+
+从三个方面去查：行，列，以及各个subsquare。对于每行（或每列，每个小方块），我们用哈希表来存储已经出现了的数字。如果碰到一个元素，它在哈希表里已经
+出现过了，就证明这个数独不是有效的。
+
+//插入方法isValidSudoku和isValidSub
