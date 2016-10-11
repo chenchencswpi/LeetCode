@@ -1,0 +1,9 @@
+Given an array of integers and an integer k, find out whether there are two distinct indices i and j 
+in the array such that nums[i] = nums[j] and the difference between i and j is at most k.
+
+题目的意思是，给我们一个整形数组和一个整数k，让我们找出存不存在这么两个下标i和j,nums[i] = nums[j]并且他们的坐标差不大于k。
+
+我们可以维护一个哈希表来存储元素以及其最近的出现的位置。每次读到一个新元素，查看它是不是在哈希表里，如果有的话，判断他们之间的下标的差。
+如果不大于k,返回true。将该下标存到哈希表里。
+
+//插入方法containsNearbyDuplicate()
