@@ -1,0 +1,25 @@
+Given two strings s and t, determine if they are isomorphic.
+
+Two strings are isomorphic if the characters in s can be replaced to get t.
+
+All occurrences of a character must be replaced with another character while preserving the order of 
+characters. No two characters may map to the same character but a character may map to itself.
+
+For example,
+Given "egg", "add", return true.
+
+Given "foo", "bar", return false.
+
+Given "paper", "title", return true.
+
+Note:
+You may assume both s and t have the same length.
+
+给定两个字符串，让我们确定它俩是不是同构的。所谓同构，就是说我们代替s中出现的字符，从而得到t。所有在s当中出现的字符都需要被替换掉。一个
+字符只能被另一种字符替换，而不能被多种字符替换。
+
+那这道题很明显需要我们建立一个哈希表来维持映射关系，而且只能是1对1映射。也就是说，当我们在同时遍历s和t的时候，碰到一个s的字符，那么如果在
+哈希表里已经存了关于这个字符的映射，那我们去找被映射到的字符是不是和t当中的这个字符相同。如果在哈希表里还没有存这个字符的映射，那么我们要看
+在t里所对应的字符是不是已经被用做别的字符的映射。
+
+//插入方法isIsomorphic()
