@@ -1,0 +1,15 @@
+Given an array of integers, every element appears twice except for one. Find that single one.
+
+Note:
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+题目大意是给一个整形数组，每个元素都出现两次，只有一个元素出现一次。找出那个只出现一次的元素。
+
+如果不看follow up，题目很简单。维护一个hashset,对于一个元素，如果不在hashset里，就加进去。如果已经有一个同伴在hashset里面了，就
+把它从hashset里面去掉。那么最终，这个hashset会剩下一个元素，那就是我们所寻找的单身狗。那follow up问到，能不能不用额外的内存啊？
+
+那么如果不用额外内存，就需要用到一个叫做异或的位运算了。什么叫异或？就是说两个位在进行异或运算的时候，如果它们不同，结果为1，如果相同，结果
+为0.也就是说，只有1 ^ 0的结果才是1，1 ^ 1和0 ^ 0都为0.那对于咱们这个题有什么作用呢？大家仔细想想，如果两个数相同，那么它们的异或运算是不是
+就是0了?那如果有一堆全是成对儿的数字，比如2个3，2个4，那么它们最终的异或肯定会为0，那么0和单身狗去异或，得到的结果还是单身狗。
+
+//插入方法singleNumber()
