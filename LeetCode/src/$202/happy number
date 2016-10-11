@@ -1,0 +1,21 @@
+Write an algorithm to determine if a number is "happy".
+
+A happy number is a number defined by the following process: Starting with any positive integer, 
+replace the number by the sum of the squares of its digits, and repeat the process until the number 
+equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers 
+for which this process ends in 1 are happy numbers.
+
+Example: 19 is a happy number
+
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+
+写一种算法来确定一个数字是不是欢乐数。所谓的欢乐数是这样定义的：刚开始给定任意正整数，然后用所有digit的平方的和来替换这个数，重复这样做直到
+数字为1，这样的数字就叫做欢乐数。但如果会陷入无限的循环而永远不能到达1，那就不是欢乐数了。
+
+怎样判断处理这个数的时候会不会陷入无限的循环当中呢？那我们可以用一个哈希表，来记录每次这个数变形后产生的数字。如果当我们发现某次变形后的数字已经
+在以前被存储过了，那就证明会陷入无限的循环当中了。。
+
+//插入方法isHappy()和getNext()
