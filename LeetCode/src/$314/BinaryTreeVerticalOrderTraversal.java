@@ -15,7 +15,7 @@ public class BinaryTreeVerticalOrderTraversal {
         int minLeft = 0, maxRight = 0;
         HashMap<Integer, List<Integer>> map = new HashMap<>();
         Queue<TreeNode> nodeQueue = new LinkedList<>();
-        Queue<Integer> columnQueue = new LinkedList<>();
+        Queue<Integer> columnQueue = new LinkedList<>();	//用来存放节点对应的列
         nodeQueue.offer(root);
         columnQueue.offer(0);
         while (!nodeQueue.isEmpty()) {
