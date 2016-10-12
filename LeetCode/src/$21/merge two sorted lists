@@ -1,0 +1,6 @@
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together 
+the nodes of the first two lists.
+
+题目大意是让我们合并两个排好序的单向链表并返回新链表。新链表应当是由两个旧链表拼合而成。
+
+//插入方法mergeTwoLists()
