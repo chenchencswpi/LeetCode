@@ -1,0 +1,19 @@
+Given a linked list, remove the nth node from the end of list and return its head.
+
+For example,
+
+   Given linked list: 1->2->3->4->5, and n = 2.
+
+   After removing the second node from the end, the linked list becomes 1->2->3->5.
+Note:
+Given n will always be valid.
+Try to do this in one pass.
+
+题目的大意是，给我们一个单向链表，移除从后往前数第n个节点，并返回链表头。
+
+我们可以先遍历一下链表得到长度，然后再遍历一次，到达被删节点的前一个节点，然后直接将这个节点的next指向被删节点的下一个节点即可。
+但是这样做的话我们需要遍历链表两次，但是题目期望我么遍历一次。那就是比较经典的双指针法，设两个指针，分别叫做快，慢指针，让快指针
+先走n部，然后两个指针一起走，直到快指针的下一位是空，那么这会儿慢指针的位置就是被删节点的前一个了。大家可以动手画一画，并牢记这种
+解法。这种解法非常经典，在很多链表题目中都会用到。
+
+//插入方法removeNthFromEnd()
