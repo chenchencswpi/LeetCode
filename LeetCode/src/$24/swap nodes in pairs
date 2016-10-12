@@ -1,0 +1,11 @@
+Given a linked list, swap every two adjacent nodes and return its head.
+
+For example,
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+
+Your algorithm should use only constant space. You may not modify the values in the list, 
+only nodes itself can be changed.
+
+题目大意是给定一个单向链表，让我们交换两个相邻的节点，并返回新的链表头。注意不能耍赖，只交换两个节点存储的值，而且只能用constant space。
+
+//插入方法swapPairs()
