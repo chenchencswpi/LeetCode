@@ -1,0 +1,13 @@
+You are given two linked lists representing two non-negative numbers. The digits are stored in reverse 
+order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+题目的大意是，给我们两个链表代表两个非负数。数字里的每一位都由一个节点表示。最重要的位置存在链表的最后，也就是说个位存在链表的最开始，接着是十位，
+以此类推。让我们将两个链表加和，并用链表的形式返回。
+
+首先创建一个新的链表来保存结果。维护一个carry变量，用来存储两个链表对应位置的加和。加完后，将carry除以10取余数的结果放入新链表中，并将carry/10
+的结果带入到下一轮运算（跟咱们小学做加法是一个道理）。当两个链表都遍历完后，一定记得再去check一下carry是否为0.
+
+//插入方法addTwoNumbers()
