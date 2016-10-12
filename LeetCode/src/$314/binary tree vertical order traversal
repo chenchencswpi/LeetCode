@@ -1,0 +1,33 @@
+Given a binary tree, return the vertical order traversal of its nodes' values. (ie, from top to bottom, column by column).
+
+If two nodes are in the same row and column, the order should be from left to right.
+
+Example:
+
+Given binary tree [3,9,8,4,0,1,7,null,null,null,2,5] (0's right child is 2 and 1's left child is 5),
+     3
+    /\
+   /  \
+   9   8
+  /\  /\
+ /  \/  \
+ 4  01   7
+    /\
+   /  \
+   5   2
+return its vertical order traversal as:
+[
+  [4],
+  [9,5],
+  [3,0,1],
+  [8,2],
+  [7]
+]
+
+题目的大意是，给我们一个二叉树，让我们做垂直顺序遍历（从上往下，一列一列遍历）。如果两个节点在相同的行和列，那么顺序应该是从左往右。例如上面例子中的0和1，
+0是9的右孩子，1是8的左孩子，但0要比1靠前。
+
+这题其实也不难解。当我们在处理一个节点的时候，还需要去处理其左孩子和右孩子。处理左孩子，列号就-1，处理右孩子，列号就+1.然后我们维护一个哈希表，key是列号，
+value是一个存这列出现的元素的list。注意，这道题要用bfs，dfs是会出现问题的。例如一个节点的左孩子的右子树往右延伸了很长，超过了这个节点的右孩子所在的列。
+
+//插入方法verticalOrder()
