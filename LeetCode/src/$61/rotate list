@@ -1,0 +1,13 @@
+Given a list, rotate the list to the right by k places, where k is non-negative.
+
+For example:
+Given 1->2->3->4->5->NULL and k = 2,
+return 4->5->1->2->3->NULL.
+
+给我们一个链表，让我们将整个链表往右旋转k位，k是非负数。
+
+最基本的方法就是每次从链表尾部摘下来一位，放到头部，如此往复，做k次。但这样的解法是肯定不行的。首先我们判断k是不是大于链表的长度了，
+其实我们只要做k % （链表长度）就可以了。例如我们要往右rotate两位，其实就是讲后两位取出，然后指向链表头部就可以了。那么我们就可以
+用摆渡翁带你刷leetcode第19题中所讲的双指针法找到要被移动的那几位的前一个节点，然后就可以将最后几位取出了。
+
+//插入方法rotateRight()和getLength()
