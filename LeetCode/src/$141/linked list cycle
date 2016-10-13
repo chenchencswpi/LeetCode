@@ -1,0 +1,11 @@
+Given a linked list, determine if it has a cycle in it.
+
+Follow up:
+Can you solve it without using extra space?
+
+给我们一个单向链表，判断它是不是有环。
+
+我们可以用一个哈希表来记录所有出现过的节点，但是题目要求我们不能用额外的空间。那么我们可以用快慢指针法，也就是说，慢指针
+每次往前挪一位，快指针每次挪两位，如果有环的话，他们是迟早会相遇的。
+
+//插入方法hasCycle()
