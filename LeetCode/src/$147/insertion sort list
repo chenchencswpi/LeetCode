@@ -1,0 +1,5 @@
+Sort a linked list using insertion sort.
+
+用插入排序的方法对链表进行排序。
+
+//插入方法insertionSortList()
