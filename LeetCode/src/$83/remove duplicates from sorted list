@@ -1,0 +1,9 @@
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+For example,
+Given 1->1->2, return 1->2.
+Given 1->1->2->3->3, return 1->2->3.
+
+题目意思是给我们一个单向链表，删除那些重复的元素来保证每个元素只出现1次。
+
+//插入方法deleteDuplicates()
