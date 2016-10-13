@@ -1,0 +1,16 @@
+Reverse a linked list from position m to n. Do it in-place and in one-pass.
+
+For example:
+Given 1->2->3->4->5->NULL, m = 2 and n = 4,
+
+return 1->4->3->2->5->NULL.
+
+Note:
+Given m, n satisfy the following condition:
+1 ≤ m ≤ n ≤ length of list.
+
+题目的意思是让我们翻转从位置m到n的链表，而且只能in-place做，并且只能遍历一次。
+
+先用摆渡翁带你刷leetcode第19题里提到的双指针法，定位到第m-1位，然后对从m到n的链表进行翻转。
+
+//插入方法reverseBetween()
