@@ -1,0 +1,19 @@
+Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are 
+talking about the node number and not the value in the nodes.
+
+You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+
+Example:
+Given 1->2->3->4->5->NULL,
+return 1->3->5->2->4->NULL.
+
+Note:
+The relative order inside both the even and odd groups should remain as it was in the input. 
+The first node is considered odd, the second node even and so on ...
+
+给我们一个单向链表，将所有的位置为奇数的节点放在一起，位置为偶数的几点放在一起。你应当用in place的做法，空间复杂度应该为O(1)，时间复杂度为
+O(nodes)。
+
+这个题做法很直接，没有什么太多需要讲的。注意循环的结束条件：总长为奇数的链表和总长为偶数的链表最终的循环结束条件是不同的。
+
+//插入方法oddEvenList()
