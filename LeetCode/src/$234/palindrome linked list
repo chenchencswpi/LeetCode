@@ -1,0 +1,10 @@
+Given a singly linked list, determine if it is a palindrome.
+
+Follow up:
+Could you do it in O(n) time and O(1) space?
+
+判断一个单向链表是不是回文的。
+
+我们可以用一个栈来存储你前半部分链表，然后再和后半部分比较。但是题目问能不能用O(1)的空间来做呢？我们先用快慢指针找到链表中点，
+反转后半部分链表，然后开始进行比较即可。
+
