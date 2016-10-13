@@ -28,6 +28,40 @@ public class ConvertSortedListToBinarySearchTree {
     }
 }
 
+class Solution {
+	ListNode curr;
+    public TreeNode sortedListToBST(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        curr = head;
+        int length = getLength(head);
+        return dfs(1, length);
+    }
+    
+    TreeNode dfs(int start, int end) {
+        if (start > end) {
+            return null;
+        }
+        int middle = start + (end - start) / 2;
+        TreeNode left = dfs(start, middle - 1);
+        TreeNode root = new TreeNode(curr.val);
+        curr = curr.next;
+        root.left = left;
+        root.right = dfs(middle + 1, end);
+        return root;
+    }
+    
+    int getLength(ListNode head) {
+        int count = 0;
+        while (head != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+}
+
 class TreeNode {
 	int val;
 	TreeNode left, right;
