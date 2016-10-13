@@ -1,0 +1,13 @@
+Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+
+You should preserve the original relative order of the nodes in each of the two partitions.
+
+For example,
+Given 1->4->3->2->5->2 and x = 3,
+return 1->2->2->4->3->5.
+
+给我们一个单向链表和一个值x，将链表分成两部分，前一部分的节点值全部小于x，后一部分的节点值全部大于等于x。原来节点的相对顺序是不能变的。
+
+我们可以新建两个链表头，分别用来连接小于x的节点，和大于等于x的节点。
+
+//插入方法partition()
