@@ -1,0 +1,13 @@
+Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+
+You must do this in-place without altering the nodes' values.
+
+For example,
+Given {1,2,3,4}, reorder it to {1,4,2,3}.
+
+给我们一个单向链表L0→L1→…→Ln-1→Ln,要让我们转换成L0→Ln→L1→Ln-1→L2→Ln-2→…的形式。
+
+首先用一个快慢指针找出中点，然后将后半截链表反转，最后就可以转换成我们想要的形式了。
+
+//插入方法reorderList()
