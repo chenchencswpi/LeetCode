@@ -1,0 +1,17 @@
+Write a function that takes a string as input and reverse only the vowels of a string.
+
+Example 1:
+Given s = "hello", return "holle".
+
+Example 2:
+Given s = "leetcode", return "leotcede".
+
+Note:
+The vowels does not include the letter "y".
+
+写一个方法来反转一个字符串里的元音字符。
+
+元音字符有五个，分别是'a', 'e', 'i', 'o', 'u'，还有另外五个对应的大写字母。那么还是用双指针法，一头一尾，开始遍历，两个指针目前都指向
+元音字符的时候就开始进行调换。
+
+//插入方法reverseVowels()
