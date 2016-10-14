@@ -1,0 +1,12 @@
+Given an array S of n integers, find three integers in S such that the sum is closest to a given 
+number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+
+    For example, given array S = {-1 2 1 -4}, and target = 1.
+
+    The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+    
+给我们一个数组，然我们找出一组三元组，使它们的和离目标元素最近。
+
+和摆渡翁带你刷leetcode第15题一个做法，但每次找到一个有效三元组的时候都需要判断一下离目标值的距离。
+
+//插入方法threeSumClosest()
