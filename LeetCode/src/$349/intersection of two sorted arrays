@@ -1,0 +1,16 @@
+Given two arrays, write a function to compute their intersection.
+
+Example:
+Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+
+Note:
+Each element in the result must be unique.
+The result can be in any order.
+
+给我们两个数组，让我们找出它们重复的地方。在我们的结果里每个元素只能出现一次，顺序无所谓。
+
+方法其实较多，例如我们首先把一个数组存到哈希表里面，然后去遍历第二个数组，如果某个元素在哈希表里，那就加到结果中。怎么去重呢？其实我们
+先设一个hashset来加入所有结果，然后再把hashset放到数组里面返回就好了。那么如果不能用别的额外空间呢？那么我们先将这两个数组排序，然后
+用双指针同时遍历这两个数组就可以了。
+
+//插入方法intersection()
