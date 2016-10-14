@@ -1,0 +1,17 @@
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+For example,
+"A man, a plan, a canal: Panama" is a palindrome.
+"race a car" is not a palindrome.
+
+Note:
+Have you consider that the string might be empty? This is a good question to ask during an interview.
+
+For the purpose of this problem, we define empty string as valid palindrome.
+
+给我们一个字符串，让我们判断它是不是回文的。只考虑字母和数字，并忽略大小写。
+
+做法很直接，用双指针法，不断判断左右的有效字符是不是相等。题目稍微有点麻烦的地方是如何判断左右字符是不是相等，主要是因为题目说了忽略大小写。
+也就是说'a'和'A'是相同的。大家可能会想到用他们的绝对值差是不是32来判断，但注意‘0’和‘P‘，他们的差也是32，但它俩并不相同。
+
+//插入整个ValidPalindrome类

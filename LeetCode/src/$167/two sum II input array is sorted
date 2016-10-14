@@ -1,0 +1,18 @@
+Given an array of integers that is already sorted in ascending order, find two numbers such that 
+they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, 
+where index1 must be less than index2. Please note that your returned answers (both index1 and index2) 
+are not zero-based.
+
+You may assume that each input would have exactly one solution.
+
+Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2
+
+给我们已经升序排好的数组，让我们找到两个数字，使得它们的加和为目标值，并返回它们的下标，注意下标并不是以0为基准的。
+
+一种方法是用哈希表，不断记录目前出现过的元素，当我们拿到新的元素的时候，去查看它的complementary是不是在哈希表里。但是这就浪费了
+一个条件，也就是数组已经排好序了。那么我们可以用双指针法来找到这样的pair。看代码：
+
+//插入方法twoSum()

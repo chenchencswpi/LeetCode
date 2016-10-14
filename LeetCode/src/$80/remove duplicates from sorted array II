@@ -1,0 +1,14 @@
+Follow up for "Remove Duplicates":
+What if duplicates are allowed at most twice?
+
+For example,
+Given sorted array nums = [1,1,1,2,2,3],
+
+Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3. 
+It doesn't matter what you leave beyond the new length.
+
+这题是"Remove Duplicates"的一道follow up，问如果每个元素最多允许出现两次呢？
+
+其实也没啥难的，我们设一个counter来记录这个元素出现了几次，如果从来没有出现过或者只出现了一次，还是加到结果中来。
+
+//插入方法removeDuplicates()
