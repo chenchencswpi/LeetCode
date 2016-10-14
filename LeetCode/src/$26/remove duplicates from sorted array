@@ -1,0 +1,18 @@
+Given a sorted array, remove the duplicates in place such that each element appear only once and return 
+the new length.
+
+Do not allocate extra space for another array, you must do this in place with constant memory.
+
+For example,
+Given input array nums = [1,1,2],
+
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. 
+It doesn't matter what you leave beyond the new length.
+
+给我们一个排好序的数组，让我们移除所有重复元素以保证每个元素只能出现1次。不能用额外的空间。你的方法应当只返回新的数组长度，你在新数组长度之后
+放什么元素都无所谓。
+
+双指针法。定义两个指针分别叫cursor和pointer。cursor用来代表目前该填值位置的下标，pointer用来遍历整个数组。当我们碰到一个unique的元素的时候，
+将它赋值给cursor的位置，如果有重复，直接跳过重复部分就好。
+
+//插入方法removeDuplicates()
