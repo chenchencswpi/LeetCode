@@ -1,0 +1,13 @@
+Given an array of n positive integers and a positive integer s, find the minimal length of a 
+subarray of which the sum ≥ s. If there isn't one, return 0 instead.
+
+For example, given the array [2,3,1,2,4,3] and s = 7,
+the subarray [4,3] has the minimal length under the problem constraint.
+
+给我们一个全部由正整数构成的数组，和一个正整数s，让我们找到一个长度最小的子数组，这个子数组的所有元素的和不小于s。如果没有
+这样的子数组，返回0.
+
+我们先来分析一下。对于数组当中的每个元素，他们都是一个子数组的开头，那么对于每个元素，我们就让其作为开头部分，然后不停的往这个子数组
+里添加后面的元素，直到不小于目标值，然后再去update一下目前的最小数组长度即可。
+
+//插入方法minSubArrayLen()
