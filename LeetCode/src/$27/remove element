@@ -1,0 +1,18 @@
+Given an array and a value, remove all instances of that value in place and return the new length.
+
+Do not allocate extra space for another array, you must do this in place with constant memory.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+
+Example:
+Given input array nums = [3,2,2,3], val = 3
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+给我们一个数组和一个目标值，让我们从数组里面移除所有为目标值的元素。不能再去声明另一个数组，必须in place来做。元素的先后顺序可以
+被打乱。在返回的新数组长度的后面放什么元素都无所谓。
+
+还是双指针法，定义两个变量，cursor和pointer。cursor用来代表目前需要填放的位置的下标，pointer用来遍历整个数组。当遇到一个元素是目标值，
+那就跳过，如果不是，就将其放在cursor的位置上。
+
+//插入方法removeElement()
