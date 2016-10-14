@@ -1,0 +1,8 @@
+Implement strStr().
+
+Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+让我们是先strStr()方法。这个方法是说让我们返回needle在haystack中出现的第一个坐标。如果needle不是haystack的子字符串，
+就返回-1.
+
+//插入方法strStr()
